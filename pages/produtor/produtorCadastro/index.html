@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="../../../node_modules/bootstrap/dist/css/bootstrap.css"
+      />
+      <link rel="stylesheet" href="styles.css" />
+      <title>Cadastro</title>
+   </head>
+   <body>
+      <div class="container-fluid header">
+         <a href="../../../index.html"
+            ><img
+               src="../../../Public/imgs/Logo projeto copy.png"
+               alt="logo fruta boa"
+               class="logo"
+         /></a>
+         <h1>Cadastre-se</h1>
+      </div>
+
+      <div class="container-fluid col pt-3 h-100 div-form">
+         <form class="formulario" onsubmit="return redireciona()">
+            <div class="mb-3">
+               <label for="nome" class="form-label">Nome</label>
+               <input type="text" class="form-control" required id="nome" />
+            </div>
+            <div class="mb-3">
+               <label for="cpf-cnpj" class="form-label">CPF/CNPJ</label>
+               <input type="text" class="form-control" required id="cpf-cnpj" />
+            </div>
+            <div class="mb-3">
+               <label for="endereco" class="form-label">Endereço</label>
+               <input
+                  type="edress"
+                  class="form-control"
+                  required
+                  id="endereco"
+               />
+            </div>
+            <div class="mb-3">
+               <label for="telefone" class="form-label">Telefone</label>
+               <input type="tel" class="form-control" required id="telefone" />
+            </div>
+            <div class="mb-3">
+               <label for="email" class="form-label">E-mail</label>
+               <input type="email" class="form-control" required id="email" />
+            </div>
+            <div class="mb-3">
+               <label for="senha" class="form-label">Senha</label>
+               <input
+                  type="password"
+                  class="form-control"
+                  required
+                  id="senha"
+               />
+            </div>
+            <div class="mb-3">
+               <label for="confirmar-senha" class="form-label"
+                  >Confirme a senha</label
+               >
+               <input
+                  type="password"
+                  class="form-control"
+                  required
+                  id="confirmar-senha"
+               />
+            </div>
+
+            <div class="mb-3 form-check">
+               <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="check"
+                  required
+               />
+               <label class="form-check-label" for="check"
+                  >Li e concordo com os termos</label
+               >
+            </div>
+            <div class="d-flex justify-content-around">
+               <button type="submit" class="btn btn-outline-primary">
+                  Cadastrar
+               </button>
+               <a href="../../index.html" class="btn btn-outline-danger"
+                  >Voltar</a
+               >
+            </div>
+         </form>
+      </div>
+
+      <div class="container-fluid footer">
+         <div class="row align-items-center p-2 justify-content-between">
+            <div class="col-sm-3 d-flex justify-content-center logo-footer">
+               <img
+                  src="../../../Public/imgs/Logo projeto.png"
+                  alt="logo fruta boa"
+                  class="img-fluid w-25"
+               />
+            </div>
+            <div class="col-sm-6 text-center">
+               <h5 class="p-0 m-0">Beleza sustentável vem de dentro</h5>
+               <p class="p-0 m-0">Além de ajudar o meio ambiente, voê ainda pode se surpreender com os sabelres únicos e inusitado</p>
+            </div>
+            <div class="col-sm-3 text-center">
+               <h5>Fale conosco</h5>
+               <a href="info@boafruta.com.br">info@boafruta.com.br</a>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         function redireciona(){
+            var nome = document.getElementById('nome').value;
+            var cpfCnpj = document.getElementById('cpf-cnpj').value;
+            var endereco = document.getElementById('endereco').value;
+            var telefone = document.getElementById('telefone').value;
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;  
+            var confirmarSenha = document.getElementById('confirmar-senha').value;
+
+            if (nome !== '' && cpfCnpj !== '' && endereco !== '' && telefone !== '' && email !== '' && senha !== '' && confirmarSenha !== '') {
+               window.location.href = '../confirmacaoCadastroProdutor/index.html';
+               return false;
+            } else {
+               alert('Por favor, preencha todos os campos!');
+               return false;
+            }
+         }
+      </script>
+
+      <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+   </body>
+</html>
+         

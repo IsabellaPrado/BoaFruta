@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="../../../node_modules/bootstrap/dist/css/bootstrap.css"
+      />
+      <link rel="stylesheet" href="styles.css" />
+      <title>Login</title>
+   </head>
+   <body>
+      <div class="container-fluid">
+
+         <div class="row row1">
+            <div class="col d-flex align-items-center header">
+               <a href="../../../index.html">
+                  <img
+                     src="../../../Public/imgs/Logo projeto copy.png"
+                     alt=""
+                     class="logo"
+                  />
+               </a>
+               <h1>Login</h1>
+            </div>
+         </div>
+
+         <div class="row row2">
+            <div class="col corpo">
+               <form onsubmit="return redireciona()">
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" required class="form-control" id="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" required class="form-control" id="senha">
+                  </div>
+                  <div class="mb-3">
+                     <label for="tipoPessoa" class="form-label">Tipo de pessoa</label>
+                     <select name="" id="tipoPessoa" required class="form-select">
+                        <option value="" selected disabled></option>
+                        <option value="consumidor">Consumidor</option>
+                        <option value="pontoDerecolha">Ponto de recolha</option>
+                        <option value="produtorRural">Produtor Rural</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                     <button type="submit" class="btn btn-outline-success">Entrar</button>
+                  </div>
+                </form>
+            </div>
+         </div>
+
+         <div class="row row3">
+            <div class="col-sm-3 d-flex justify-content-center logo-footer">
+               <img
+                  src="../../../Public/imgs/Logo projeto.png"
+                  alt="logo fruta boa"
+                  class="logo"
+               />
+            </div>
+            <div class="col-sm-6 text-center">
+               <h5 class="p-0 m-0">Beleza sustentável vem de dentro</h5>
+               <p class="p-0 m-0">Além de ajudar o meio ambiente, voê ainda pode se surpreender com os sabelres únicos e inusitado</p>
+            </div>
+            <div class="col-sm-3 text-center">
+               <h5>Fale conosco</h5>
+               <a href="../../geral/faleConosco/FaleConosco.html" target="_blank">info@boafruta.com.br</a>
+            </div>
+            <a href="../../../pages/pontoColeta/pontoDeColetaPagamentoConfirmacaoPedido/pontoColetaConfirmacao.html"></a>
+            </div>
+         </div>
+
+      </div>
+
+      <script>
+          function redireciona() {
+            var selectElement = document.getElementById("tipoPessoa");
+            var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+
+            if (selectedOption === "consumidor") {
+            window.location.href = "../../../pages/consumidor/consumidorMeuPerfil/pageconsumer.html";
+            } else if (selectedOption === "pontoDerecolha") {
+            window.location.href = "../../../pages/pontoColeta/pontoDeColetaPagamentoConfirmacaoPedido/pontoColetaConfirmacao.html";
+            } else if (selectedOption === "produtorRural") {
+            window.location.href = "../../../pages/produtor/produtorPerfil/index.html";
+            }
+
+            return false; 
+    }
+      </script>
+
+      <script src="../../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+   </body>
+</html>

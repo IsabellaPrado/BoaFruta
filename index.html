@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="./node_modules/bootstrap/dist/css/bootstrap.css"
+      />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="styele.css">
+      <title>Fruta Boa</title>
+      
+   </head>
+
+   <body>
+
+      <div class="container-fluid header">
+         <div class="row align-items-center p-2 justify-content-between ">
+            <div class="col-2">
+               <img
+                  src="./Public/imgs/Logo projeto.png"
+                  alt="logo fruta boa"
+                  class="img-fluid w-25 logo"
+               />
+            </div>
+            <div class="col-2 justify-content-end d-flex">
+               <a href="/pages/geral/login/index.html" class="btn btn1 py-0 m-0">Login</a>
+            </div>
+         </div>
+      </div>
+
+      <div class="container-fluid px-3 menu-carrossel">
+         <div class="row">
+            <div class="col-sm-2 p-0 menu">
+               <div
+                  class="d-flex flex-column text-center justify-content-between"
+               >
+                  <h1 class="text-white menuH1">Inicio</h1>
+                  <ul class="nav flex-column">
+                     <li class="nav-item m-1">
+                        <a href="pages/geral/quemSomos/quem-somos.html" class="nav-link">
+                           Quem somos/ funcionamento
+                        </a>
+                     </li>
+                     <li class="nav-item m-1">
+                        <a href="pages/consumidor/cosumidorRedigstro/pageregister.html" class="nav-link">
+                           Quero comprar boas frutas
+                        </a>
+                     </li>
+                     <li class="nav-item  m-1">
+                        <a href="pages/produtor/produtorCadastro/index.html" class="nav-link">
+                           Quero ser um produtor
+                        </a>
+                     </li>
+                     <li class="nav-item m-1">
+                        <a href="pages/pontoColeta/pontoDeColetaCadastro/pontoDeColetaCadastro.html" class="nav-link">
+                           Quero ser um distribuidor
+                        </a>
+                     </li>
+                     <li class="nav-item m-1">
+                        <a href="pages/geral/noticias/Noticias.html" class="nav-link"> Noticias </a>
+                     </li>
+                     <li class="nav-item m-1">
+                        <a href="pages/geral/faleConosco/FaleConosco.html" class="nav-link">
+                           Fale conosco
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="col-md-10 h-100hv">
+               <div
+                  id="carouselExampleCaptions"
+                  class="carousel slide w-100 h-100"
+               >
+                  <div class="carousel-indicators">
+                     <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                     ></button>
+                     <button
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                     ></button>
+                  </div>
+                  <div class="carousel-inner w-100 h-100">
+                     <div class="carousel-item active w-100 h-100 ">
+                        <div class="h-100 w-100 d-flex align-items-center carrosel-slide1">
+                           <div
+                              class="w-100 d-flex justify-content-center"
+                           >
+                              <div>
+                                 <h1>Exerimente!</h1>
+                                 <p class="m-0">Compre nossa caixa</p>
+                                 <p class="m-0">de boas frutas</p>
+                                 <p class="m-0">e contribua para</p>
+                                 <p class="m-0">um mundo mais sustentavel</p>
+                                 <a
+                                    href="pages/consumidor/consumidorMeuPerfil/pageconsumer.html"
+                                    class="btn btn1"
+                                 >
+                                    Comprar agora!
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="w-100 justify-content-center d-flex">
+                              <img
+                                 src="./Public/imgs/vegetal.png"
+                                 class="w-75"
+                                 alt="..."
+                              />
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="carousel-item w-100 h-100">
+                        <div class="h-100 w-100 d-flex align-items-center carrosel-slide1">
+                           <div
+                              class="w-100 d-flex justify-content-center"
+                           >
+                              <div>
+                                 <h1>Nossa Missão!</h1>
+                                 <p class="m-0">Levar alimentos</p>
+                                 <p class="m-0">para aqueles que precisam</p>
+                                 <p class="m-0">e evitar o desperdicio</p>
+                                 <a
+                                    href="pages/geral/quemSomos/quem-somos.html"
+                                    class="btn btn1"
+                                 >
+                                    Saiba mais
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="w-100 justify-content-center d-flex">
+                              <img
+                                 src="./Public/imgs/vegetais.png"
+                                 class="w-75"
+                                 alt="..."
+                              />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <button
+                     class="carousel-control-prev d-flex justify-content-start ps-3"
+                     type="button"
+                     data-bs-target="#carouselExampleCaptions"
+                     data-bs-slide="prev"
+                  >
+                     <span
+                        class="carousel-control-prev-icon h-25 w-25"
+                        aria-hidden="true"
+                     ></span>
+                     <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                     class="carousel-control-next d-flex justify-content-end pe-3"
+                     type="button"
+                     data-bs-target="#carouselExampleCaptions"
+                     data-bs-slide="next"
+                  >
+                     <span
+                        class="carousel-control-next-icon h-25 w-25"
+                        aria-hidden="true"
+                     ></span>
+                     <span class="visually-hidden">Next</span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="container-fluid onde-chegamos">
+         <div class="d-flex justify-content-center">
+            <h1 class="p-3">Onde chegamos</h1>
+         </div>
+         <div  class="d-flex justify-content-around">
+            <div class="p-0">
+               <div class="d-flex align-items-center justify-content-center"">
+                  <h3 class="pe-2">10</h3>
+                  <img src="Public/imgs/farmer.png" alt="" class="img-fluid icones">
+               </div>
+               <p>produtores</p>
+            </div>
+
+            <div>
+               <div class="d-flex align-items-center justify-content-center"">
+                  <h3 class="pe-2">10</h3>
+                  <img src="Public/imgs/store-front.png" alt="" class="img-fluid icones">
+               </div>
+               <p>pontos de recolha</p>
+            </div>
+
+            <div>
+               <div class="d-flex align-items-center justify-content-center"">
+                  <h3 class="pe-2">10</h3>
+                  <img src="Public/imgs/aperto-de-mao.png" alt="" class="img-fluid icones">
+               </div>
+               <p>clientes apoiadores</p>
+            </div>
+
+            <div>
+               <div class="d-flex align-items-center justify-content-center">
+                  <h3 class="pe-2">10</h3>
+                  <img src="Public/imgs/vegetables.png" alt="" class="img-fluid icones">
+               </div>
+               <p>desperdicio evitado</p>
+            </div>
+         </div>
+
+         <div class="container-fluid d-flex">
+            <img src="Public/imgs/vegetais-em-linha.png" alt="" class="w-25 img-fluid">
+            <img src="Public/imgs/vegetais-em-linha.png" alt="" class="w-25 img-fluid">
+            <img src="Public/imgs/vegetais-em-linha.png" alt="" class="w-25 img-fluid">
+            <img src="Public/imgs/vegetais-em-linha.png" alt="" class="w-25 img-fluid">
+         </div>
+      </div>
+
+      <div class="container-fluid py-3 quem-somos">
+         <div class="row">
+            <div class="col-8">
+               <div class="px-3 texto">
+                  <h1>Quem somos</h1>
+                  <p>Está cansado de ver as mesmas flurtas lindas e perfeitas nas prateleira dos mercados? Que tal experimentar uma caixa de frutais feias e sustentáveis?</p>
+                  <p>A boa fruta que acredita no pontencial de trodas as frutas, mesmo aquelas que podem parecer "feias" ou fora do padrão de beleza comercial.</p>
+                  <p>Afinal, a aparência não define o sabor ou as propriedades nutricionais das frutas e legumes. Por isso, nosso comprimisso é evitar o desperdício desses alimentos e ajudar a criar um mundo mais sustentável</p>                  
+                  <a href="pages/geral/quemSomos/quem-somos.html" class="btn btn-outline-success btn">Quero saber mais</a>
+               </div>
+            </div>
+            <div class="col-4  d-flex justify-content-center align-items-center">
+               <img src="Public/imgs/Screenshot_1.png" alt="" class="img-fluid">
+            </div>
+         </div>
+      </div>
+
+      <div class="container-fluid d-flex align-items-center justify-content-around tres-imagens">
+         <div class="w-25">
+            <a class="d-flex justify-content-center" href="pages/produtor/produtorCadastro/index.html">
+               <img src="Public/imgs/sejaUmProdutor.png" alt="" class="img-fluid">
+            </a>
+         </div>
+         <div class="w-25">
+            <a href="" class="justify-content-center d-flex">
+               <img src="Public/imgs/sejaUmPontoDeColeta.png" alt="" class="img-fluid">
+            </a>
+         </div>
+         <div class="w-25">
+            <a href="" class="justify-content-center d-flex">
+               <img src="Public/imgs/Noticias.png" alt="" class="img-fluid">
+            </a>
+         </div>
+      </div>
+
+      <div id="caroussel-2" class="carousel slide carrossel-2">
+         <div class="carousel-indicators">
+           <button type="button" data-bs-target="#caroussel-2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+           <button type="button" data-bs-target="#caroussel-2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+           <button type="button" data-bs-target="#caroussel-2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+         </div>
+         <div class="carousel-inner">
+            
+           <div class="carousel-item active">
+            <div class="d-flex align-items-center justify-content-center">
+               <div class="card border-secondary text-center w-75">
+                  <div class="card-header">O que as Pessoas falam sobre nós</div>
+                  <div class="card-body text-secondary">
+                     <img src="Public/imgs/icons8-balão-de-fala.gif" alt="">
+                     <h5 class="card-title">Lucas Antonio</h5>
+                     <p class="card-text">Frutas em bom estado, muito saboras. Tabém aoderei experimentar novos legumes que não conhecia, Adorei a experiência.</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            
+            <div class="carousel-item">
+               <div class="d-flex align-items-center justify-content-center">
+                  <div class="card border-secondary text-center w-75">
+                     <div class="card-header">O que as Pessoas falam sobre nós</div>
+                     <div class="card-body text-secondary">
+                        <img src="Public/imgs/icons8-balão-de-fala.gif" alt="">
+                        <h5 class="card-title">Maria Lucia Silva</h5>
+                        <p class="card-text">Frutas em bom estado, muito saboras. Tabém aoderei experimentar novos legumes que não conhecia, Adorei a experiência.</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="carousel-item">
+               <div class="d-flex align-items-center justify-content-center">
+                  <div class="card border-secondary text-center w-75">
+                     <div class="card-header">O que as Pessoas falam sobre nós</div>
+                     <div class="card-body text-secondary">
+                        <img src="Public/imgs/icons8-balão-de-fala.gif" alt="">
+                        <h5 class="card-title">Laura Cardoso</h5>
+                        <p class="card-text">Frutas em bom estado, muito saboras. Tabém aoderei experimentar novos legumes que não conhecia, Adorei a experiência.</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                     </div>
+                  </div>
+               </div>
+            </div> 
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#caroussel-2" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#caroussel-2" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+       </div>
+
+      <div class="container-fluid footer">
+         <div class="row align-items-center p-2 justify-content-between">
+            <div class="col-sm-3 d-flex justify-content-center logo-footer">
+               <img
+                  src="./Public/imgs/Logo projeto.png"
+                  alt="logo fruta boa"
+                  class="img-fluid w-25"
+               />
+            </div>
+            <div class="col-sm-6 text-center">
+               <h5 class="p-0 m-0">Beleza sustentável vem de dentro</h5>
+               <p class="p-0 m-0">Além de ajudar o meio ambiente, voê ainda pode se surpreender com os sabelres únicos e inusitado</p>
+            </div>
+            <div class="col-sm-3 text-center">
+               <h5>Fale conosco</h5>
+               <a href="info@boafruta.com.br">info@boafruta.com.br</a>
+            </div>
+         </div>
+      </div>
+
+
+      <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+   </body>
+</html>

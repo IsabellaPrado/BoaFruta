@@ -1,0 +1,84 @@
+.header {
+   display: flex;
+   align-items: center;
+   background-color: #77d353;
+   padding: 10px;
+}
+.logo {
+   width: 100px;
+   padding-right: 10px;
+}
+.coluna1 {
+   background-color: #eeeded;
+   text-align: center;
+   padding: 0px;
+}
+.coluna2{
+   height: 705px;
+   justify-content: center;
+}
+
+.conta, .agencia{
+   text-align: center;
+}
+.saldo{
+   text-align: center;
+   color: #77d353;
+}
+.saque{
+   width: 50%;
+   
+}
+.form-group{
+   padding: 10px 0px;
+}
+h2 {
+   background-color: #cccbc9;
+   padding: 5px 0px;
+   margin: 0;
+}
+a {
+   color: black;
+   text-decoration: none;
+   padding: 3px 0px;
+}
+a:hover {
+   color: #77d353;
+}
+.sair:hover {
+   color: #ff5757;
+}
+.footer {
+   padding-top: 10px;
+   background-color:  #eeeded;
+}
+@media(max-width:900px){
+   .coluna2{
+      height: 960px;
+   }
+   .saque{
+      padding-bottom: 30%;
+   }
+   .coluna1{
+      width: 200px;
+   }
+}
+@media (max-width: 600px){
+   .row{
+      display: flex;
+      justify-content: center;
+   }
+   .coluna1{
+      width: 100%;
+   }
+   .dados {
+      max-height: 10%;
+   }
+   .coluna2{
+      height: auto;
+      padding: 10px 0px;
+   }
+   .saque{
+      padding-bottom: 0px;
+   }
+}

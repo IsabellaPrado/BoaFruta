@@ -1,0 +1,40 @@
+.row1{
+   height: 10vh;
+   background-color: #77d353;
+}
+.row2{
+   justify-content: center;
+   align-items: center;
+   height: 80vh;
+}
+.row3{
+   height: 10vh;
+   background-color: #eeeded;
+   align-items: center;
+}
+.corpo{
+   display: flex;
+   justify-content: center;
+}
+.table-responsive{
+   width: 70%;
+}
+.logo{
+   width:90px;
+   padding: 5px 5px;
+}
+@media (max-width:900px) {
+   .corpo{
+      padding: 0px;
+   }
+   
+}
+@media (max-width:600px) {
+   .row3, .row1{
+      height: auto;
+   }
+   .table-responsive{
+      width: auto;
+      font-size: 12px;
+   }
+}

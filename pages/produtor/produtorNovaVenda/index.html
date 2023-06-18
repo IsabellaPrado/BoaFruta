@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="../../../node_modules/bootstrap/dist/css/bootstrap.css"
+      />
+      <link
+         rel="stylesheet"
+         href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      />
+      <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" href="styles.css" />
+
+      <title>Nova Venda</title>
+   </head>
+   <body>
+      <div class="container-fluid header">
+         <a href="../../../index.html">
+            <img
+               src="../../../Public/imgs/Logo projeto copy.png"
+               alt="logo fruta boa"
+               class="logo"
+            />
+         </a>
+         <a href="../produtorPerfil/index.html" class="h1">Produtor Rural</a>
+      </div>
+
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-2 coluna1">
+               <dvi class="d-flex flex-column minha-conta">
+                  <h2>Minha Conta</h2>
+                  <a href="../produtorCarteira/idenx.html">Minha carteira</a>
+                  <a href="../produtorNovaVenda/index.html">Nove venda</a>
+                  <a href="../produtorHistorico">Historio de vendas</a>
+                  <a href="../produtorRelatorio"
+                     >Relatorio de propostas e vendas</a
+                  >
+                  <a href="../produtorBusca">Busca de pontos de coleta</a>
+               </dvi>
+               <div class="d-flex flex-column meus-dados">
+                  <h2>Meus Dados</h2>
+                  <a href="../produtorDadosPessoais">Dados pessoas</a>
+                  <a href="../produtorSenhaEmail">Senha e e-mail</a>
+               </div>
+               <div>
+                  <h2>
+                     <a class="h2 sair" href="../../../index.html">Sair</a>
+                  </h2>
+               </div>
+            </div>
+
+            <div class="col coluna2 p-0">
+               <form id="myForm">
+                  <div class="d-flex justify-content-around text-center">
+                     <div class="form-group">
+                        <label for="produto">Produto</label>
+                        <select
+                           class="form-select form-control"
+                           id="produto"
+                           aria-label="Default select example"
+                        >
+                           <option selected hidden></option>
+                           <option value="Banana">Banana</option>
+                           <option value="Maça">Maça</option>
+                           <option value="Uva">Uva</option>
+                           <option value="Batata Inglesa">
+                              Batata Inglesa
+                           </option>
+                           <option value="Cenoura">Cenoura</option>
+                        </select>
+                     </div>
+
+                     <div class="form-group">
+                        <label for="unidade">Unidade de medida</label>
+                        <select
+                           class="form-select form-control"
+                           id="unidade"
+                           aria-label="Default select example"
+                        >
+                           <option selected hidden></option>
+                           <option value="Kg">Quilos (Kg)</option>
+                           <option value="Uni">Unidade (Uni)</option>
+                        </select>
+                     </div>
+                     <div class="form-group">
+                        <label for="quantidade">Quantidade</label>
+                        <input
+                           type="number"
+                           id="quantidade"
+                           class="form-control"
+                        />
+                     </div>
+                  </div>
+                  <div class="d-flex justify-content-center my-3">
+                     <button
+                        type="button"
+                        class="btn btn-success"
+                        onclick="addItem()"
+                     >
+                        Adicionar
+                     </button>
+                  </div>
+               </form>
+               <div class="d-flex align-items-center justify-content-center">
+                  <ul id="itemList" class="list-group"></ul>
+               </div>
+               <div class="d-flex justify-content-center">
+                  <div class="py-3">
+                     <a href="index.html" class="btn btn-outline-success">
+                        Enviar proposta
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="container-fluid footer">
+         <div class="row align-items-center p-2 justify-content-between">
+            <div class="col-sm-3 d-flex justify-content-center logo-footer">
+               <img
+                  src="../../../Public/imgs/Logo projeto.png"
+                  alt="logo fruta boa"
+                  class="img-fluid w-25"
+               />
+            </div>
+            <div class="col-sm-6 text-center">
+               <h5 class="p-0 m-0">Beleza sustentável vem de dentro</h5>
+               <p class="p-0 m-0">
+                  Além de ajudar o meio ambiente, voê ainda pode se surpreender
+                  com os sabelres únicos e inusitado
+               </p>
+            </div>
+            <div class="col-sm-3 text-center">
+               <h5>Fale conosco</h5>
+               <a
+                  href="../../geral/faleConosco/FaleConosco.html"
+                  target="_blank"
+                  >info@boafruta.com.br</a
+               >
+            </div>
+         </div>
+      </div>
+
+      <script>
+         function addItem() {
+            var produto = document.getElementById("produto").value;
+            var produtoText =
+               document.getElementById("produto").options[
+                  document.getElementById("produto").selectedIndex
+               ].text;
+
+            var quantidade = document.getElementById("quantidade").value;
+            var unidade = document.getElementById("unidade").value;
+            var unidadeText =
+               document.getElementById("unidade").options[
+                  document.getElementById("unidade").selectedIndex
+               ].text;
+            var li = document.createElement("li");
+            li.className = "list-group-item";
+            var content = document.createElement("div");
+            content.innerHTML =
+               "<div class=" +
+               "align-items-start" +
+               "><strong>Item:</strong> " +
+               produto +
+               "</div>" +
+               "<div class=" +
+               "align-items-start" +
+               "><strong>Item:</strong> " +
+               unidade +
+               "</div>" +
+               "<div class=" +
+               "align-items-start" +
+               "><strong>Item:</strong> " +
+               quantidade +
+               "</div>";
+            li.appendChild(content);
+
+            document.getElementById("itemList").appendChild(li);
+
+            document.getElementById("produto").value = "";
+            document.getElementById("unidade").value = "";
+            document.getElementById("quantidade").value = "";
+         }
+         document
+            .getElementById("myForm")
+            .addEventListener("submit", function (event) {
+               event.preventDefault();
+            });
+      </script>
+   </body>
+</html>

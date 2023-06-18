@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruta Boa</title>
+    <style>
+        :root{
+            --color-white: #ffffff;
+            --color-white1: #ffffff;
+            --color-orange: #fac822;
+            --color-white3: #ffffff;
+            --color-white4: #ffffff;
+            --color-white5: #ffffff;
+            --color-whitee: #ffffff;
+            --color-green: #32af08;
+            --color-green2: #91f171;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--color-white1);
+            color: var(--color-white);
+        }
+        .img_logo_header{
+            width: 120px;
+        }
+        .header,
+        .navigation_header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .header{
+            background-color: var(--color-orange);
+            justify-content: space-between;
+            padding: 0 5%;
+            height: 6em;
+            box-shadow: 1px 1px 4px var(--color-orange);
+            text-align: left;
+        }
+        .navigation_header{
+            gap: 2em;
+            z-index: 2;
+        }
+        .content{
+            padding-top: 5em;
+            text-align: center;
+            height: 100vh;
+            transition: 1s;
+            color: var(--color-green);
+        }
+        .navigation_header a{
+            text-decoration: none;
+            color: var(--color-white);
+            transition: 1s;
+            font-weight: bold;
+            text-align: right;
+        }
+        .navigation_header a:hover{
+            color: var(--color-white);
+        }
+        .active{
+            background: var(--color-orange);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn_icon_header{
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            cursor: pointer;
+            display: none;    
+        }
+        .text-center{
+            color: var(--color-green);
+            font-weight: lighter;
+            text-align: center;
+            height: 100%;
+        }
+        .text-body-secondary{
+            color: var(--color-green);
+            font-weight: lighter;
+            text-align: center;
+            height: 100%;
+            
+        }
+        .btn-primary{
+            padding: 10px 8px;
+            width: 50px;
+            color: var(--color-green);
+            background: var(--color-white);
+            border: 1px solid var(--color-green);
+            border-radius: 5px;
+            text-align: center;
+            user-select: none;
+            cursor: pointer;
+        }
+        .btn-secondary{
+            padding: 10px 8px;
+            width: 50px;
+            color: var(--color-green);
+            background: var(--color-white);
+            border: 1px solid var(--color-green);
+            border-radius: 5px;
+            text-align: center;
+            user-select: none;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background: var(--color-green);
+            transition: background 1s;
+            color: var(--color-white);       
+        }
+        .form-select{
+            color: var(--color-green); 
+        }
+        .recuperar_senha{
+            color: var(--color-green);
+            font-size: 12px;
+        }
+        @media screen and (max-width: 768px) {
+            .navigation_header{
+                position: absolute;
+                flex-direction: column !important;
+                top: 0;
+                background: var(--color-orange);
+                height: 100%;
+                width: 35vw;
+                padding: 1em;
+                animation-duration: 1s;
+                margin-left: -100vw;
+            }
+            .btn_icon_header{
+                display: block;
+            }
+        }
+        @keyframes showSidebar {
+            from {margin-left: -100vw;}
+            to {margin-left: -10vw;}
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div class="logo_header">
+            <header>
+                <img
+                src="../../../Public/imgs/Logo projeto copy.png" alt="Logo projeto" class="img_logo_header">
+            </header>
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <a href="../../../index.html" class="active">Home</a>
+            <a href="../../geral/faleConosco/FaleConosco.html">Contato</a>
+        </div>
+        <div class="header" id="header"></div>
+        <h2>Cadastre-se</h2>
+    </div>
+    <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light"></h1>
+                <p class="lead text-body-secondary">
+                </p>
+                <form class="row g-3">
+                    <div class="col-md-4">
+                      <label for="validationServer01" class="form-label">Nome</label>
+                      <input type="text" class="form-control is-valid" id="validationServer01" required>
+                      <br>
+                      <br>
+                      <div class="valid-feedback">
+                        Parece bom!
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-4">
+                      <label for="validationServer02" class="form-label">Sobrenome</label>
+                      <input type="text" class="form-control is-valid" id="validationServer02" required>
+                      <div class="valid-feedback">
+                        Parece bom!
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                        <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                          Escolha seu username.
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-6">
+                      <label for="validationServer03" class="form-label">Cidade</label>
+                      <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                      <div id="validationServer03Feedback" class="invalid-feedback">
+                        Selecione sua Cidade.
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-3">
+                      <label for="validationServer04" class="form-label">Estado</label>
+                      <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                        <option selected disabled value="">Escolher</option>
+                        <option>...</option>
+                      </select>
+                      <br>
+                      <br>
+                      <div id="validationServer04Feedback" class="invalid-feedback">
+                        Selecione seu Estado.
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-3">
+                      <label for="validationServer05" class="form-label">Cep</label>
+                      <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                      <div id="validationServer05Feedback" class="invalid-feedback">
+                        Forneça um CEP válido.
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                        <label class="form-check-label" for="invalidCheck3">
+                          Concordo com os termos e condições.
+                        </label>
+                        <br>
+                        <br>
+                        <div id="invalidCheck3Feedback" class="invalid-feedback">
+                            Você deve concordar com os termos antes de enviar.
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-12">
+                      <a href="../pontoDeColetaConfirmacaoCadastro/pontoDeColetaConfirmacaoCadastro.html" class="btn btn-primary" type="submit">Enviar formulário</a>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </section>
+</body>
+<script>
+    var header           = document.getElementById('header');
+    var navigationHeader = document.getElementById('navigation_header');
+    var content          = document.getElementById('content');
+    var showSidebar      = false;
+
+    function toggleSidebar()
+    {
+        showSidebar = !showSidebar;
+        if(showSidebar)
+        {
+            navigationHeader.style.marginLeft = '-10vw';
+            navigationHeader.style.animationName = 'showSidebar';
+            content.style.filter = 'blur(2px)';
+        }
+        else
+        {
+            navigationHeader.style.marginLeft = '-100vw';
+            navigationHeader.style.animationName = '';
+            content.style.filter = '';
+        }
+    }
+
+    function closeSidebar()
+    {
+        if(showSidebar)
+        {
+            showSidebar = true;
+            toggleSidebar();
+        }
+    }
+
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 768 && showSidebar) 
+        {  
+            showSidebar = true;
+            toggleSidebar();
+        }
+    });
+</script>
+</html>
