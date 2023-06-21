@@ -110,6 +110,7 @@
                <a href="info@boafruta.com.br">info@boafruta.com.br</a>
             </div>
          </div>
+         <a href="../confirmacaoCadastroProdutor/index.html"></a>
       </div>
 
       <script>
@@ -122,14 +123,28 @@
             var senha = document.getElementById('senha').value;  
             var confirmarSenha = document.getElementById('confirmar-senha').value;
 
+            const produtor = {
+               nome,
+               email,
+               senha,
+               tipoDeUsuario: 1
+            }
+
             if (nome !== '' && cpfCnpj !== '' && endereco !== '' && telefone !== '' && email !== '' && senha !== '' && confirmarSenha !== '') {
-               window.location.href = '../confirmacaoCadastroProdutor/index.html';
-               return false;
+               if(senha === confirmarSenha){
+                  localStorage.setItem(`${produtor.email}`, JSON.stringify(produtor))
+                  window.location.href = '../confirmacaoCadastroProdutor/index.html'
+                  return false;
+               }
+               alert("Senha e confirmação são diferente!")
+
             } else {
                alert('Por favor, preencha todos os campos!');
                return false;
             }
          }
+
+         
       </script>
 
       <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>

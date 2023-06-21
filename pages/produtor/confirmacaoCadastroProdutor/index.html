@@ -24,7 +24,8 @@
       </div>
       <div class="container col pt-3">
          <div class="corpo">
-            <h1 class="my-5">Obrigado por se cadastrar</h1>
+            <h1 class="my-5">Obrigado por se cadastrar,</h1>
+            <h2 id="produtor" class="m-0 p-0"></h2>
             <h3 class="my-5">
                Agradecemos por se cadastrar em nosso site e aceitar nossos
                termos de uso, Estamos felizes em te-lo(a) conosco!
@@ -52,6 +53,15 @@
             </div>
          </div>
       </div>
+
+      <script>      
+         const produtorChave = localStorage.key(localStorage.length - 1)
+         const getProdutor = localStorage.getItem(produtorChave)
+         const produtor = JSON.parse(getProdutor)
+
+         document.getElementById("produtor").innerHTML = produtor.nome
+
+      </script>
       <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
       
 
