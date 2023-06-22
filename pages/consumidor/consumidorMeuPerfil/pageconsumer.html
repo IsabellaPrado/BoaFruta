@@ -28,7 +28,7 @@
             <div class="col">
                 <div class="row">
                     <h2 class="mt-5" style="padding-left: 8%;">BEM VINDO AO BOA FRUTA</h2>
-                    <h2 style="padding-left: 8%;"> João da Silva!</h2>
+                    <h2 style="padding-left: 8%;" id="consumidor"></h2>
                     <div class="my-2">
                         <div class="row">
                             <div class="col-10 col-sm-8 col-md-4">
@@ -66,10 +66,14 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <img src="../../../Public/imgs/icone perfil.jpg" height="60" width="60">
+                                                    <img src="../../../Public/imgs/icone perfil.jpg" height="60"
+                                                        width="60">
                                                 </div>
                                                 <div class="col">
-                                                    João da Silva<br /> joãodasilva@gamil.com
+                                                    <div>
+                                                        <span id="nome"></span><br />
+                                                        <span id="email"></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -120,13 +124,14 @@
                                     <div class="accordion-body">
                                         <a href="../consumidorHistorio/pagehistoric.html">Histórico de compras</a>
                                         <br />
-                                        <a href="../consumidorConfirmacaoPagamento/pagecheckpayment.html">Comprovante de vendas</a>
+                                        <a href="../consumidorConfirmacaoPagamento/pagecheckpayment.html">Comprovante de
+                                            vendas</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-2">
-                            <a  href="../../../index.html" type="button" class="btn btn-danger w-100">Sair</a>
+                            <a href="../../../index.html" type="button" class="btn btn-danger w-100">Sair</a>
                         </div>
                     </div>
                 </div>
@@ -154,6 +159,14 @@
             </div>
         </div>
     </div>
+    <script>
+        const consumidor = JSON.parse(localStorage.getItem("consumidor"));
+
+        document.getElementById("consumidor").innerHTML = consumidor.nome;
+        document.getElementById("nome").innerHTML = consumidor.nome;
+        document.getElementById("email").innerHTML = consumidor.email;
+
+    </script>
 </body>
 
 </html>
